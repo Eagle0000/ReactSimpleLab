@@ -7,7 +7,7 @@
 	<!--
 		+ STR STYLEs VIEW_CODEs
 	-->
-	<style rel="stylesheet" href="view/main.css" type="text/css" />
+	<link rel="stylesheet" href="view/main.css" type="text/css" />
 	<!--
 		- END STYLEs VIEW_CODEs
 		+ STR CALL CDN SCRIPTs 
@@ -21,7 +21,92 @@
 	<script src="script/interface.js"></script>
 	<!-- CONTROL SCRIPT 				-->
 	<script type="text/babel">
+	/*
+		+ STR INTERFACE LINKING 
+	*/
+	const pgHdr                                   =document.getElementById("pg-header");
+	const pgCnts                                  =document.getElementById("pg-contents");
+	const pgFtr                                   =document.getElementById("pg-footer");
+	
+	
+	/*
+		- END INTERFACE LINKING 
+		+ CRT COMPs 
+	*/
+	// COMP F PG-HEADER 
+	className PgHeader extends React.Component{
 		
+		render(){
+			return (
+				<div classNameName="wrapper clearfix">
+					<div id="logo">
+						<a href="index.html"><img src="images/logo.png" alt="LOGO" /></a>
+					</div>
+					<ul id="navigation">
+						<li classNameName="selected">
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="about.html">About</a>
+						</li>
+						<li>
+							<a href="blog.html">Blog</a>
+						</li>
+						<li>
+							<a href="gallery.html">Gallery</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact Us</a>
+						</li>
+					</ul>
+				</div>
+			);
+		
+		};//END STR CNTs 
+	}//END PgHdr{} className 
+	ReactDOM.render(<PgHeader />, pgHdr);
+	// COMP F PG-CONTENTs 
+	className PgContent extends React.Component{
+		
+		render(){
+			return(
+				
+				<div >
+					
+					<div id="adbox">
+						<div classNameName="wrapper clearfix">
+							<div className="info">
+								<h1>Sonsectetur adipiscing elit.</h1>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae quam et tortor consequat porta. Sed faucibus, ligula quis mollis lobortis, diam felis tempus enim, a vestibulum eros quam ac magna. Vestibulum varius porttitor elit, et vulputate odio egestas sit amet.
+								</p>
+							</div>
+						</div>
+						<div className="highlight">
+							<h2>Lorem ipsum dolor sit amet - <i>consectetur adipiscing elit.</i></h2>
+						</div>
+					</div>
+					<div className="body clearfix">
+						<div className="click-here">
+							<h1>Lorem Ipsum Dolor!</h1>
+							<a href="index.html" className="btn2">Click Here!</a>
+						</div>
+						<p style="font-size:12px;">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec mi tortor. Phasellus commodo semper vehicula. Praesent aliquam semper massa et scelerisque. Suspendisse dapibus interdum diam, non varius nisl laoreet at. Pellentesque imperdiet molestie sollicitudin. Sed nec magna nibh, sed interdum nisi. Mauris vel pretium nibh. Morbi congue velit quis eros imperdiet ac el eifend elit condimentum. Nulla vestibulum dictum tellus quis iaculis. Duis a diam vitae sem tristique vestibulum. Praesent dapibus, tortor nec hendrerit pulvinar, lectus tortor viverra ante,
+						</p>
+					</div>
+				</div>
+			);
+			
+		}//END STR CNTs 
+		
+	};//END PgContent{} className 
+	ReactDOM.render(
+		<PgContent />,
+		pgCnts
+	);
+	
+	
 		
 		
 		
@@ -36,21 +121,21 @@
 		+ STR PG-HEADER: CMP_1 
 	-->
 	<aside 
-		id="pg-hdr">
+		id="pg-header">
 	</aside>
 	<!--
 		- END PG-HEADER 
 		+ STR PG-CONTENTs: CMP_2
 	-->
 	<aside 
-		id="pg-cnts">
+		id="pg-contents">
 	</aside>
 	<!-- 
 		- END PG-CONTENTs 
 		+ STR PG-FOOTER: CMP_3  
 	-->
 	<aside 
-		id="pg-ftr">
+		id="pg-footer">
 	</aside>
 	<!-- 
 		- END PG-FOOTER 
