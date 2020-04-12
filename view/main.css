@@ -1,0 +1,15 @@
+root:{
+	--deft-1:white;
+	--deft-2:black;
+	--deft-3:grey;
+	--deft-5:lightgrey;	
+}*{
+	padding:0px;
+	margin:0px;
+	border-box:box-sizing;
+}body{
+	background:var(--deft-1);
+	color:var(--deft-2);
+	border:1px solid var(--deft-2);
+	width:100%;
+}
